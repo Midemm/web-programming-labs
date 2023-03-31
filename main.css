@@ -6,21 +6,21 @@ body {
 }
 
 header {
-    background:linear-gradient(to bottom, red, orange, yellow, green, #42aaff, blue, purple);
+    background:linear-gradient(to right bottom, black, red,orange,white);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
 }
 
 footer {
-    background:linear-gradient(to bottom, red, orange, yellow, green, #42aaff, blue, purple);
+    background:linear-gradient(to left bottom, black, red,orange,white);
     color: lightgreen;
     padding: 10px;
     font-size: 16pt;
     text-align: right
 }
 a{
-
+    transition: 3s 100ms;
 }
 
 a:visited{
@@ -32,6 +32,7 @@ a:hover{
     color: red;
     text-decoration: underline;
     background-color: white;
+    transition: 300ms 500ms;
 }
 
 a:active{
