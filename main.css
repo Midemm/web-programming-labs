@@ -7,16 +7,29 @@ body {
 
 header {
     background:linear-gradient(to right bottom, black, red,orange,white);
-    color: lightgreen;
+    color: black;
     padding: 10px;
     font-size: 16pt;
+}
+header:hover {
+    background:linear-gradient(to right bottom, black, red,orange,white);
+    color: lightgreen;
+    padding: 10px;
+    font-size: 20pt;
 }
 
 footer {
     background:linear-gradient(to left bottom, black, red,orange,white);
-    color: lightgreen;
+    color: black;
     padding: 10px;
     font-size: 16pt;
+    text-align: right
+}
+footer:hover {
+    background:linear-gradient(to left bottom, black, red,orange,white);
+    color: lightgreen;
+    padding: 10px;
+    font-size: 20pt;
     text-align: right
 }
 a{
