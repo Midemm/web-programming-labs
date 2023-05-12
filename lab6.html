@@ -168,11 +168,37 @@
         }
         function filter(){
             let color = document.getElementById('ccolor').value;
-            let type = document.getElementById('ttype')
-            let clothes = document.getElementById('clothes')
+            let type = document.getElementById('ttype').value;
+            let clothes = document.getElementById('clothes');
             
             if(color=='Красный' && type =='Поло'){
                 clothes.src = 'redPolo.jpg';
+            }
+            if(color=='Белый' && type =='Поло'){
+                clothes.src = 'whitePolo.jpg';
+            }
+            if(color=='Чёрный' && type =='Поло'){
+                clothes.src = 'blackPolo.png';
+            }
+
+            if(color=='Красный' && type =='Футболка'){
+                clothes.src = 'redFut.jpg';
+            }
+            if(color=='Белый' && type =='Футболка'){
+                clothes.src = 'whiteFut.jpg';
+            }
+            if(color=='Чёрный' && type =='Футболка'){
+                clothes.src = 'blackFut.jpg';
+            }
+
+            if(color=='Красный' && type =='Майка'){
+                clothes.src = 'redMay.png';
+            }
+            if(color=='Белый' && type =='Майка'){
+                clothes.src = 'whiteMay.jpg';
+            }
+            if(color=='Чёрный' && type =='Майка'){
+                clothes.src = 'blackMay.jpg';
             }
         }
     </script>
