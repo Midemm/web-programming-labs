@@ -13,6 +13,13 @@
             margin: 10px 500px;
             text-align: center;
         }
+        .color{
+            border: 3px solid;
+            border-radius: 10px;
+            margin: 20px 500px;
+            text-align: center;
+            padding: 30px ;
+        }
     </style>
     <script>
         let number;
@@ -64,6 +71,38 @@
             screens[1].style.display = 'none';
             screens[0].style.display = 'block';
         }
+        function changeColor(div){
+            if(div.style.backgroundColor == 'yellow'){
+                div.style.backgroundColor= 'red';
+                div.style.color= 'orange';
+                document.getElementById('color-name').innerHTML='красный';
+            }
+            else if(div.style.backgroundColor == 'red'){
+                div.style.backgroundColor= 'black';
+                div.style.color= 'white';
+                document.getElementById('color-name').innerHTML='чёрный';
+            }
+            else if(div.style.backgroundColor == 'black'){
+                div.style.backgroundColor= 'blue';
+                div.style.color= 'green';
+                document.getElementById('color-name').innerHTML='синий';
+            }
+            else if(div.style.backgroundColor == 'blue'){
+                div.style.backgroundColor= 'green';
+                div.style.color= 'yellow';
+                document.getElementById('color-name').innerHTML='зелёный';
+            }
+            else if(div.style.backgroundColor == 'green'){
+                div.style.backgroundColor= 'pink';
+                div.style.color= 'black';
+                document.getElementById('color-name').innerHTML='розовый';
+            }
+            else {
+                div.style.backgroundColor= 'yellow';
+                div.style.color= 'blue';
+                document.getElementById('color-name').innerHTML='жёлтый';
+            }
+        }
     </script>
 </head>
 <body>
@@ -96,7 +135,7 @@
             </div>
             <button onclick="again()">Сыграть ещё раз</button>
         </div>
-        
+
         <div class="rules">
             <button onclick="rules()">
                 Показать правила игры
@@ -114,6 +153,12 @@
                 <li>Если Вы угадали число, то появится надпись о победе</li>
                 <li>Если захотите сыграть ещё раз надмите на кнопку "Сыграть ещё раз"</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет <span id="color-name">Жёлтый</span><br>
+            Сделайте двойной клик для смены цвета
+
         </div>
     </main>
 
