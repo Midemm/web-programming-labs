@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Колесников Дмитрий Константинович. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function ShowSum(){
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result)
+        }        
+    </script>
+    <style>
+        .message{
+            width: 210px;
+            height: 30px;
+            background-color: pink;
+            border: 2px solid;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +33,8 @@
     </header>    
 
     <main>
-
+        <div class="message" onclick="ShowSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать, кто автор страницы</div>
     </main>
 
     <footer>
