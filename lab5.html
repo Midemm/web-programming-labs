@@ -47,6 +47,14 @@
             let Authot = 'Здравствуйте\nАвтор страницы:\nКолесников Дмитрий Константинович';
             alert(Authot)
         }     
+        function changeOutput(buttonNum, backColor, textColor, border, borderColor){
+            let output = document.getElementById('output')
+            output.innerHTML = 'Нажата кнопка ' + buttonNum; 
+            output.style.backgroundColor =  backColor;
+            output.style.color = textColor; 
+            output.style.borderRadius = border;
+            output.style.borderColor = borderColor;
+        }
     </script>
     <style>
         .message{
@@ -57,6 +65,11 @@
             border-radius: 5px;
             display: inline-block;
             cursor: pointer;
+        }
+        #output{
+            border: 1px solid;
+            width: 300px;
+            height: 40px;
         }
     </style>
 </head>
@@ -74,6 +87,13 @@
         <div class="message" onclick="ShowUmn()">Найти произведение чисел</div>
         <div class="message" onclick="ShowDel()">Найти разность чисел</div>
         <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', '5px', 'green')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', '10px', 'green')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, '#7FB5B5', 'blue', '15px', 'black')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, ' #FCE883', ' #EFA94A', '7px', 'white')">
+        </div>
+        <div id="output"></div>
     </main>
 
     <footer onclick="ShowAuthor()">
