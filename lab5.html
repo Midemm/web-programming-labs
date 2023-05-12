@@ -12,7 +12,11 @@
             let b = 7891;
             let result = a + b;
             alert('Сумма ' + a + ' и ' + b + ' равна ' + result)
-        }        
+        }   
+        function ShowAuthor(){
+            let Authot = 'Здравствуйте\nАвтор страницы:\nКолесников Дмитрий Константинович';
+            alert(Authot)
+        }     
     </script>
     <style>
         .message{
@@ -28,16 +32,16 @@
 </head>
 
 <body>
-    <header>
+    <header onclick="ShowAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>    
 
     <main>
         <div class="message" onclick="ShowSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message" onclick="ShowAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="ShowAuthor()">
         &copy; Колесников Дмитрий, ФБИ-12, 2 курс, 2023
     </footer>
 </body>
