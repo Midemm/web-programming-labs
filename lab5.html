@@ -55,6 +55,22 @@
             output.style.borderRadius = border;
             output.style.borderColor = borderColor;
         }
+        function backetSum(){
+            let PriceLimon = document.getElementById('Limon');
+            let PriceBanan = document.getElementById('Banan');
+            let PricePomidor = document.getElementById('Pomidor');
+            let PriceCheese = document.getElementById('Cheese');
+            let PriceWatermelon = document.getElementById('Watermelon');
+
+            let CenLi = parseInt(PriceLimon.value) * 50;
+            let CenBa = parseInt(PriceBanan.value) * 40;
+            let CenPo = parseInt(PricePomidor.value) * 35;
+            let CenCh = parseInt(PriceCheese.value) * 300;
+            let CenWa = parseInt(PriceWatermelon.value) * 120;
+
+            let PriceSum = CenLi + CenBa + CenPo + CenCh + CenWa;
+            alert(PriceSum)
+        }
     </script>
     <style>
         .message{
@@ -70,6 +86,13 @@
             border: 1px solid;
             width: 300px;
             height: 40px;
+        }
+        #backet{
+            border: 2px solid;
+            border-radius: 10px;
+            width: 400px;
+            height: 500px;
+            text-align: center;
         }
     </style>
 </head>
@@ -94,6 +117,17 @@
             <input type="button" value="Кнопка 4" onclick="changeOutput(4, ' #FCE883', ' #EFA94A', '7px', 'white')">
         </div>
         <div id="output"></div>
+        <div id="backet">
+            <h1>Корзина продуктов</h1>
+            <label>Лимоны(50р/шт):<br><input type = "numder" value = "0" id = "Limon"> </label><br>
+            <label>Бананы(40р/шт):<br><input type = "numder" value = "0" id = "Banan"> </label><br>
+            <label>Помидоры(35р/шт):<br><input type = "numder" value = "0" id = "Pomidor"> </label><br>
+            <label>Сыр(300р/шт):<br><input type = "numder" value = "0" id = "Cheese"> </label><br>
+            <label>Арбуз(120р/кг):<br><input type = "numder" value = "0" id = "Watermelon"> </label><br>
+            <input type="button" value="Рассчитать стоимость" onclick="backetSum()">
+        </div>
+
+        </div>
     </main>
 
     <footer onclick="ShowAuthor()">
