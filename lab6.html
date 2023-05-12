@@ -39,6 +39,16 @@
             margin: 300px;
             margin-top: 50px;
         }
+        .filter{
+            border: 3px solid;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            background-color: orange;
+            margin: 400px;
+            margin-top: 150px;
+        }
     </style>
     <script>
         let number;
@@ -156,6 +166,15 @@
                 wid=2
             }
         }
+        function filter(){
+            let color = document.getElementById('ccolor').value;
+            let type = document.getElementById('ttype')
+            let clothes = document.getElementById('clothes')
+            
+            if(color=='Красный' && type =='Поло'){
+                clothes.src = 'redPolo.jpg';
+            }
+        }
     </script>
 </head>
 <body>
@@ -220,6 +239,25 @@
 
         <div class="expansion" onclick="expansionBlock(this)">
             Расширить блок
+        </div>
+        <div class="filter">
+            Цвет одежды:
+            <select id="ccolor">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select>
+
+            Тип одежды:
+            <select id="ttype">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select>
+
+            <button onclick="filter()">ОК</button><br>
+
+            <img id="clothes" style="width: 450px;">
         </div>
     </main>
 
