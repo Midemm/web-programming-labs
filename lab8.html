@@ -15,13 +15,21 @@
             font-size: 20px;
             color: green;
         }
+        #time{
+            margin: 15px;
+            position: absolute;
+            left: 93%;
+            color: rgb(208, 211, 47);
+            top: -15px;
+        }
     </style>
 </head>
 <body onload="showDate()">
     <header>
         НГТУ, ФБ, Лабораторная работа 6
+        <div id="time">00:00:00</div>
     </header>
-
+    
     <div id="local-time"></div>
     <div>
         <label>Дата рождения: <input type="date"></label>

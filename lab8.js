@@ -48,3 +48,9 @@ function clearDaysCount() {
     let clearButton = document.getElementById("clearButton");
     clearButton.style.visibility = "hidden";
 }
+function ShowTime(){
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-Ru');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval (ShowTime, 1000);
